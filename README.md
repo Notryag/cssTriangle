@@ -1,15 +1,21 @@
-# umi project
+#  Welcome to cssTriangle
+ ----
+> 一个css三角形生成器工具
 
-## Getting Started
-
-Install dependencies,
+## install
 
 ```bash
-$ yarn
+yarn
 ```
 
-Start the dev server,
+### Start the dev server,
 
 ```bash
 $ yarn start
 ```
+
+可以快捷生成三角行,五角星等css
+
+方便快捷
+
+![alt](/18430708648666.png)
