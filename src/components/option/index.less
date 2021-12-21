@@ -1,0 +1,138 @@
+.optionWrap {
+    display: flex;
+  
+    .starFive,
+    .starFive::before,
+    .starFive::after {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: calc(var(--width) * 0.726542px) calc(var(--width) * 1px) 0
+        calc(var(--width) * 1px);
+      border-color: var(--color) transparent transparent transparent;
+    }
+  
+    .starFive {
+      top: -16px;
+      --color: rgb(18, 15, 222);
+      --angle: 0;
+      --width: 20;
+      --height: 60;
+  
+      position: relative;
+      transform: rotate(calc(var(--angle) * 1deg));
+    }
+  
+    .starFive::before {
+      content: '';
+      position: absolute;
+      transform: translate(-50%, -100%) rotate(70deg);
+    }
+  
+    .starFive::after {
+      content: '';
+      position: absolute;
+      transform: translate(-50%, -100%) rotate(-70deg);
+    }
+  
+    .heart {
+      --color: rgb(18, 15, 222);
+      --angle: 0;
+      --width: 20;
+      --height: 35;
+      --cwidth: calc(var(--width) * 1px);
+      --cheight: calc(var(--height) * 1px);
+      --cangle: calc(var(--angle) * 1deg);
+      height: 40px;
+      width: 40px;
+      transform: rotate(var(--cangle));
+      position: relative;
+    }
+  
+    .heart:before,
+    .heart:after {
+      position: absolute;
+      top: 0;
+      content: '';
+      background: var(--color);
+      left: var(--cwidth);
+      width: var(--cwidth);
+      height: var(--cheight);
+      border-radius: var(--cheight) var(--cheight) 0 0;
+      transform: rotate(-45deg);
+      transform-origin: 0 100%;
+    }
+  
+    .heart:after {
+      content: '';
+      left: 0;
+      top: 0;
+      transform: rotate(45deg);
+      transform-origin: 100% 100%;
+    }
+  
+    //三角形
+    .triangle {
+      vertical-align: top;
+      height: 28px;
+      position: relative;
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      transform: rotate(0deg);
+      border-width: 0 15px 30px 15px;
+      border-color: transparent transparent rgb(18, 15, 222) transparent;
+    }
+  
+    .eight {
+      --size: 30;
+      --angle: 0;
+      --bw: 6;
+      --color: rgb(18, 15, 222);
+  
+      --cbw: calc(var(--bw) * 1px);
+      --cangle: calc(var(--angle) * 1deg);
+      --csize: calc(var(--size) * 1px);
+      vertical-align: top;
+      width: calc(
+        var(--csize) * 2 + (var(--csize) - var(--cbw)) * 1.414 - var(--csize)
+      );
+      height: var(--csize);
+      position: relative;
+    }
+  
+    .eight::before,
+    .eight::after {
+      content: '';
+      position: absolute;
+      width: var(--csize);
+      height: var(--csize);
+      border: var(--cbw) solid var(--color);
+      border-radius: 50% 50% 0 50%;
+      box-sizing: border-box;
+    }
+  
+    .eight::before {
+      transform: rotate(-45deg);
+      left: 0;
+    }
+  
+    .eight::after {
+      transform: rotate(135deg);
+      right: 0;
+    }
+    .circular {
+      --size: 40;
+      --sw: 6;
+      --csize: calc(var(--size) * 1px);
+      --csw: calc(var(--sw) * 1px);
+      --color: rgb(18, 15, 222);
+      width: var(--csize);
+      height: var(--csize);
+      border-radius: 50%;
+      box-shadow: var(--csw) var(--csw) 0 0 var(--color);
+      transform: translate(calc(var(--sw) * 1px), calc(var(--sw) * -2px));
+    }
+  }
+  

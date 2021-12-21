@@ -1,0 +1,193 @@
+.wrap {
+    position: relative;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f0f0;
+  
+    .main {
+      flex: 1 1;
+      margin: 0 auto;
+      width: 980px;
+  
+      .box {
+        display: flex;
+  
+        .editArea {
+          display: inline-block;
+          width: 420px;
+          margin-left: 20px;
+          margin-right: 60px;
+          padding: 20px;
+          border-radius: 5px;
+          background-color: #fff;
+        }
+  
+        .previewBg {
+          display: inline-block;
+          width: 360px;
+          height: 360px;
+          text-align: center;
+          line-height: 360px;
+          background-color: #eee;
+          background-image: linear-gradient(
+              45deg,
+              rgba(0, 0, 0, 0.2) 25%,
+              transparent 0,
+              transparent 75%,
+              rgba(0, 0, 0, 0.2) 0
+            ),
+            linear-gradient(
+              45deg,
+              rgba(0, 0, 0, 0.2) 25%,
+              transparent 0,
+              transparent 75%,
+              rgba(0, 0, 0, 0.2) 0
+            );
+          background-size: 30px 30px;
+          background-position: 0 0, 15px 15px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+  
+      .codeWrap {
+        width: 980px;
+        transition: all 0.5s;
+      }
+    }
+  }
+  
+  .trans {
+    transition: all 0.6s;
+  }
+  
+  .heart {
+    --width: 25;
+    --height: 40;
+    --angle: 45;
+    --color: 'rgb(18, 15, 222)';
+    --cwidth: calc(var(--width) * 1px);
+    --cheight: calc(var(--height) * 1px);
+    --cangle: calc(var(--angle) * 1deg);
+    height: 5px;
+    width: 5px;
+    transform: rotate(var(--cangle));
+    position: relative;
+  }
+  
+  .heart:before,
+  .heart:after {
+    position: absolute;
+    top: 0;
+    content: '';
+    background: var(--color);
+    left: var(--cwidth);
+    width: var(--cwidth);
+    height: var(--cheight);
+    border-radius: var(--cheight) var(--cheight) 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+  }
+  
+  .heart:after {
+    content: '';
+    left: 0;
+    top: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+  }
+  
+  // 三角形的tan 值为0.72
+  
+  .starFive,
+  .starFive::before,
+  .starFive::after {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: calc(var(--width) * 0.726542px) calc(var(--width) * 1px) 0
+      calc(var(--width) * 1px);
+    border-color: var(--color) transparent transparent transparent;
+  }
+  
+  .starFive {
+    --width: 100;
+    --color: rgb(18, 15, 222);
+    --angle: 35;
+    position: relative;
+    transform: rotate(calc(var(--angle) * 1deg));
+  }
+  
+  .starFive::before {
+    content: '';
+    position: absolute;
+    transform: translate(-50%, -100%) rotate(70deg);
+  }
+  
+  .starFive::after {
+    content: '';
+    position: absolute;
+    transform: translate(-50%, -100%) rotate(-70deg);
+  }
+  
+  .triangle {
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    transform: rotate(0deg);
+    border-width: 0 30px 60px 30px;
+    border-color: transparent transparent rgb(18, 15, 222) transparent;
+  }
+  
+  .eight {
+    --size: 30;
+    --angle: 0;
+    --bw: 6;
+    --color: rgb(18, 15, 222);
+  
+    --cbw: calc(var(--bw) * 1px);
+    --cangle: calc(var(--angle) * 1deg);
+    --csize: calc(var(--size) * 1px);
+    transform: rotate(var(--cangle));
+    width: calc(
+      var(--csize) * 2 + (var(--csize) - var(--cbw)) * 1.414 - var(--csize)
+    );
+    height: var(--cheight);
+    position: relative;
+  }
+  .eight::before,
+  .eight::after {
+    content: '';
+    position: absolute;
+    width: var(--csize);
+    height: var(--csize);
+    border: var(--cbw) solid var(--color);
+    border-radius: 50% 50% 0 50%;
+    box-sizing: border-box;
+  }
+  .eight::before {
+    transform: rotate(-45deg);
+    left: 0;
+  }
+  .eight::after {
+    transform: rotate(135deg);
+    right: 0;
+  }
+  .circular {
+    --size: 40;
+    --sw: 6;
+    --csize: calc(var(--size) * 1px);
+    --csw: calc(var(--sw) * 1px);
+    --color: rgb(18, 15, 222);
+    --angle: 0;
+    --cangle: calc(var(--angle) * 1deg);
+    width: var(--csize);
+    height: var(--csize);
+    border-radius: 50%;
+    box-shadow: var(--csw) var(--csw) 0 0 var(--color);
+    transform: rotate(var(--cangle));
+  }
+  

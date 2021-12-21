@@ -1,0 +1,65 @@
+.wrap {
+    position: relative;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f0f0;
+  
+    .main {
+      flex: 1 1;
+      margin: 0 auto;
+      width: 980px;
+  
+      .box {
+        display: flex;
+  
+        .editArea {
+          display: inline-block;
+          width: 420px;
+          margin-left: 20px;
+          margin-right: 60px;
+          padding: 20px;
+          border-radius: 5px;
+          background-color: #fff;
+        }
+  
+        .previewBg {
+          display: inline-block;
+          width: 360px;
+          height: 360px;
+          text-align: center;
+          line-height: 360px;
+          background-color: #eee;
+          background-image: linear-gradient(
+              45deg,
+              rgba(0, 0, 0, 0.2) 25%,
+              transparent 0,
+              transparent 75%,
+              rgba(0, 0, 0, 0.2) 0
+            ),
+            linear-gradient(
+              45deg,
+              rgba(0, 0, 0, 0.2) 25%,
+              transparent 0,
+              transparent 75%,
+              rgba(0, 0, 0, 0.2) 0
+            );
+          background-size: 30px 30px;
+          background-position: 0 0, 15px 15px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+  
+      .codeWrap {
+        width: 980px;
+        transition: all 0.5s;
+      }
+    }
+  }
+  
+  .trans {
+    transition: all 0.6s;
+  }
+  
