@@ -1,6 +1,9 @@
 {
   "private": true,
+  "homepage":".",
   "scripts": {
+    "predeploy": "yarn build", 
+    "deploy": "gh-pages -d dist",
     "start": "umi dev",
     "build": "umi build",
     "postinstall": "umi generate tmp",
@@ -21,6 +24,7 @@
   },
   "dependencies": {
     "@ant-design/pro-layout": "^6.5.0",
+    "gh-pages": "^3.2.3",
     "react": "17.x",
     "react-color": "^2.19.3",
     "react-dom": "17.x",
