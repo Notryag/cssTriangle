@@ -20,6 +20,14 @@ pnpm dev
 pnpm build
 ```
 
+### Quality checks
+
+```bash
+pnpm lint
+pnpm typecheck
+pnpm test
+```
+
 可以快捷生成三角行,五角星等css
 
 方便快捷

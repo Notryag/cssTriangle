@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Form, Input, Radio, Slider } from 'antd';
 import { SketchPicker } from 'react-color';
-import { FormColumn, ShapeValues } from '@/config';
+import type { FormColumn, ShapeValues } from '@/config';
 
 const FormItem = Form.Item;
 

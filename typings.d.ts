@@ -4,7 +4,7 @@ declare module '*.css';
 declare module '*.less';
 declare module '*.png';
 declare module 'react-color' {
-  import * as React from 'react';
+  import type * as React from 'react';
 
   export interface ColorResult {
     hex: string;

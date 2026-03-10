@@ -1,6 +1,6 @@
 import React from 'react';
 import './index.less';
-import { ShapeName } from '@/config';
+import type { ShapeName } from '@/config';
 
 interface OptionProps {
   onChange: (value: ShapeName) => void;
@@ -30,7 +30,7 @@ export default function Option(props: OptionProps) {
         style={{ display: 'inline-block', height: '50px', width: '100%' }}
       >
         <h2>点击选择图形：</h2>
-        {options.map((o, index) => (
+        {options.map((o) => (
           <span
             style={{
               marginRight: '40px',
