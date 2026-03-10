@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import styles from './index.less';
+import styles from './index.module.less';
 import { humpToUnderline } from '@/utils/util';
 import CodeWrap from '@/components/codeWrap/index';
 

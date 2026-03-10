@@ -3,6 +3,7 @@
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "resolveJsonModule": true,
     "importHelpers": true,
     "jsx": "react-jsx",
@@ -10,9 +11,9 @@
     "sourceMap": true,
     "baseUrl": "./",
     "strict": true,
+    "types": ["vite/client"],
     "paths": {
-      "@/*": ["src/*"],
-      "@@/*": ["src/.umi/*"]
+      "@/*": ["src/*"]
     },
     "allowSyntheticDefaultImports": true
   },
@@ -20,7 +21,7 @@
     "mock/**/*",
     "src/**/*",
     "config/**/*",
-    ".umirc.ts",
+    "vite.config.ts",
     "typings.d.ts"
   ],
   "exclude": [

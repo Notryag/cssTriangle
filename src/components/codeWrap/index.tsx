@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import styles from './index.less';
+import styles from './index.module.less';
 import { Button, Input } from 'antd';
 import { copy } from '@/utils/util';
 

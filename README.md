@@ -5,13 +5,19 @@
 ## install
 
 ```bash
-yarn
+pnpm install
 ```
 
-### Start the dev server,
+### Start the dev server
 
 ```bash
-$ yarn start
+pnpm dev
+```
+
+### Build
+
+```bash
+pnpm build
 ```
 
 可以快捷生成三角行,五角星等css
