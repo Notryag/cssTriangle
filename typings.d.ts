@@ -3,10 +3,25 @@
 declare module '*.css';
 declare module '*.less';
 declare module '*.png';
+declare module 'react-color' {
+  import * as React from 'react';
+
+  export interface ColorResult {
+    hex: string;
+  }
+
+  export interface SketchPickerProps {
+    color: string;
+    onChange: (color: ColorResult) => void;
+  }
+
+  export const SketchPicker: React.ComponentType<SketchPickerProps>;
+}
+
 declare module '*.svg' {
   export function ReactComponent(
     props: React.SVGProps<SVGSVGElement>,
   ): React.ReactElement;
-  const url: string;
-  export default url;
+  const src: string;
+  export default src;
 }

@@ -1,18 +1,21 @@
 import React from 'react';
 import './index.less';
+import { ShapeName } from '@/config';
 
-export default function Option(props: any) {
-  const options = [
-    { value: 'triangle', className: 'triangle' },
-    { value: 'starFive', className: 'starFive' },
-    { value: 'heart', className: 'heart' },
-    { value: 'eight', className: 'eight' },
-    { value: 'circular', className: 'circular' },
-  ];
-  const handleClick = (e: any) => {
-    props.onChange(e.target.classList[0] || props.value);
-  };
+interface OptionProps {
+  onChange: (value: ShapeName) => void;
+  value: ShapeName;
+}
 
+const options: Array<{ value: ShapeName; className: string }> = [
+  { value: 'triangle', className: 'triangle' },
+  { value: 'starFive', className: 'starFive' },
+  { value: 'heart', className: 'heart' },
+  { value: 'eight', className: 'eight' },
+  { value: 'circular', className: 'circular' },
+];
+
+export default function Option(props: OptionProps) {
   return (
     <div
       style={{
@@ -35,7 +38,7 @@ export default function Option(props: any) {
             }}
             className={o.className || ''}
             key={o.value}
-            onClick={(e) => handleClick(e)}
+            onClick={() => props.onChange(o.value)}
           ></span>
         ))}
       </span>

@@ -142,22 +142,22 @@
     border-color: transparent transparent rgb(18, 15, 222) transparent;
   }
   
-  .eight {
-    --size: 30;
-    --angle: 0;
-    --bw: 6;
+.eight {
+  --size: 30;
+  --angle: 0;
+  --bw: 6;
     --color: rgb(18, 15, 222);
   
     --cbw: calc(var(--bw) * 1px);
     --cangle: calc(var(--angle) * 1deg);
     --csize: calc(var(--size) * 1px);
-    transform: rotate(var(--cangle));
-    width: calc(
-      var(--csize) * 2 + (var(--csize) - var(--cbw)) * 1.414 - var(--csize)
-    );
-    height: var(--cheight);
-    position: relative;
-  }
+  transform: rotate(var(--cangle));
+  width: calc(
+    var(--csize) * 2 + (var(--csize) - var(--cbw)) * 1.414 - var(--csize)
+  );
+  height: var(--csize);
+  position: relative;
+}
   .eight::before,
   .eight::after {
     content: '';
